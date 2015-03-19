@@ -2,9 +2,12 @@
   "name": "git-website-analyzer",
   "version": "0.0.1",
   "private": true,
+  "description": "learn the alefh bet",
+  "author": "Tal Waserman",
+  "main": "server.js",
   "scripts": {
-    "start": "node ./bin/www"
-  },
+      "start": " node server.js"
+    },
   "dependencies": {
     "body-parser": "~1.0.0",
     "cookie-parser": "~1.0.1",
@@ -17,5 +20,8 @@
     "get": "^1.4.0",
     "please-ajax": "^1.0.8",
     "request": "^2.53.0"
-  }
+  },
+    "engines": {
+        "node": "0.10.x"
+    }
 }
