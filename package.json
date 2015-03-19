@@ -13,6 +13,9 @@
     "http": "0.0.0",
     "jade": "~1.3.0",
     "morgan": "~1.0.0",
-    "static-favicon": "~1.0.0"
+    "static-favicon": "~1.0.0",
+    "get": "^1.4.0",
+    "please-ajax": "^1.0.8",
+    "request": "^2.53.0"
   }
 }

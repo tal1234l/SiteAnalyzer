@@ -1,5 +1,4 @@
 body {
-  padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
@@ -8,9 +7,10 @@ a {
 }
 
 .main_header{
+    border-top: 7px solid black;
     position: relative;
-    padding: 30px 15px;
-    color: #cdbfe3;
+    padding: 40px 15px;
+    color: #ffffff;
     text-align: center;
     text-shadow: 0 1px 0 rgba(0,0,0,.1);
     background-color: #6f5499;
@@ -22,6 +22,29 @@ a {
     background-repeat: repeat-x;
 }
 
-.main_header span{
-    
+.main_header h4{
+    color: #cdbfe3;
+    text-shadow: 0 1px 0 rgba(0,0,0,.1);
+}
+
+.block{
+    display: inline-block;
+}
+
+.code-icon{
+    font-size: 8em !important;
+    color:#cdbfe3;
+}
+
+.searchBox{
+    width: 50%;
+    margin: 7% auto;
+}
+
+.form-group label{
+    color:#563d7c;
+}
+
+#FormInput{
+    width: 80% !important;
 }

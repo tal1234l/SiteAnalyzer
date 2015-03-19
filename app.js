@@ -7,6 +7,7 @@ module.exports = function() {
     var logger = require('morgan');
     var cookieParser = require('cookie-parser');
     var bodyParser = require('body-parser');
+    var routes = require('./routes')();
 
     var app = express();
     app.set('port', process.env.PORT || 3000);
@@ -18,6 +19,8 @@ module.exports = function() {
     app.use(cookieParser());
     app.use(express.static(path.join(__dirname, 'public')));
 
+    /*API's*/
+    app.post('/analyze', routes.analyze);
 
     return app;
 }
