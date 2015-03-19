@@ -1,14 +1,18 @@
 module.exports = function () {
-    var request = require('request');
+    //var request = require('request');
     var functions = {};
 
 
     functions.analyze = function (req, res) {
         debugger;
+        var request = require('request');
         request('http://www.google.com', function (error, response, body) {
-            if (!error && response.statusCode == 200) {
+                res.status(200).json({
+                    status: 'analyzed',
+                    body: body
+                });
                 console.log(body) // Show the HTML for the Google homepage.
-            }
+
         })
 
 

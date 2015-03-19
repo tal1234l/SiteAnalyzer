@@ -6,7 +6,11 @@ function sendUrl() {
         url: window.location.origin+"/analyze",
         data: {url: $('#FormInput').val()},
         success: function(data){
-            debugger;
+            console.log(data);
+        },
+        async: false,
+        error: function(data){
+            console.log("error");
         }
     });
 
