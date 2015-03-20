@@ -39,6 +39,7 @@ a {
 .searchBox{
     width: 50%;
     margin: 3% auto;
+    margin-bottom: 5%;
 }
 
 .form-group label{
@@ -67,4 +68,5 @@ a {
     margin-left: 50%;
     margin-top: 6%;
     visibility: hidden;
+    color: #563d7c;
 }

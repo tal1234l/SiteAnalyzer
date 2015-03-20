@@ -14,16 +14,15 @@ function sendUrl() {
             }
             var div = $('<li class="result">'+
                         '<div class="block siteData">'+
-                            '<strong>Title: </strong>'+data.body.title+' <br>'+
-                            '<strong>Description: </strong>'+data.body.description+'<br>'+
-                            '<strong>Favicon: </strong>'+data.favicon+''+
+                            '<strong>Title: </strong><br>'+data.body.title+' <br>'+
+                            '<strong>Description: </strong><br>'+data.body.description+'<br>'+
+                            '<strong>Favicon: </strong><br>'+data.favicon+''+
                         '</div>'+
                         '</li>');
             $(".analyzeResult").append(div);
 
             $('.loading').css('visibility','hidden');
         },
-        async: false,
         error: function(data){
             console.log("error");
         }
