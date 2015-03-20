@@ -14,8 +14,8 @@ function sendUrl() {
             }
             var div = $('<li class="result">'+
                         '<div class="block siteData">'+
-                            '<strong>Title: </strong><br>'+data.body.title+' <br>'+
-                            '<strong>Description: </strong><br>'+data.body.description+'<br>'+
+                            '<strong>Title: </strong><br>'+data.title+' <br>'+
+                            '<strong>Description: </strong><br>'+data.description+'<br>'+
                             '<strong>Favicon: </strong><br>'+data.favicon+''+
                         '</div>'+
                         '</li>');
