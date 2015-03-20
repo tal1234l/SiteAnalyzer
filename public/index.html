@@ -8,7 +8,7 @@
 
     <link rel="stylesheet" type="text/css" href="3rdParty/bootstrap/bootstrap.min.css"/>
     <link rel="stylesheet" type="text/css" href="stylesheets/style.css"/>
-    <!--<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">-->
+
     <link rel="stylesheet" href="3rdParty/font-awesome-4.3.0/css/font-awesome.min.css">
     <script type="text/javascript" src="3rdParty/jquery/jquery.min.js"></script>
     <script type="text/javascript" src="3rdParty/bootstrap/bootstrap.min.js"></script>
@@ -25,21 +25,26 @@
         </div>
     </div>
 
-    <div class="searchBox">
-        <form >
-            <div class="form-group">
-                <label for="FormInput">SITE URL: </label>
-                <div class="form-inline">
-                    <input type="text" class="form-control" id="FormInput" placeholder="Please Enter site url for analysis">
-                    <button class="btn btn-default" id="submitBtn" onclick="sendUrl()">Submit</button>
+    <div class="mainContent">
+        <div class="fa fa-cog fa-spin fa-5x loading"></div>
+        <ul class="searchBox">
+            <form >
+                <div class="form-group">
+                    <label for="FormInput">SITE URL: </label>
+                    <div class="form-inline">
+                        <input type="text" class="form-control" id="FormInput" placeholder="Please Enter site url for analysis">
+                    </div>
                 </div>
-            </div>
-        </form>
+            </form>
+            <button class="btn btn-default" id="submitBtn" onclick="sendUrl()">Submit</button>
+        </ul>
+
+        <ul class="analyzeResult"></ul>
     </div>
+
 
     <script type="text/javascript" src="scripts/scripts.js"></script>
 </body>
 </html>
 
 
-<!--<i class="fa fa-cog fa-spin fa-5x"></i>-->

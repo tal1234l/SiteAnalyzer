@@ -1,31 +1,27 @@
 module.exports = function () {
-    //var request = require('request');
+    var request = require('request');
+    var Extrator = require("html-extractor");
+    var myExtrator = new Extrator();
+    var favicon = require('favicon');
+
     var functions = {};
 
 
     functions.analyze = function (req, res) {
-        debugger;
-        var request = require('request');
-        request('http://www.google.com', function (error, response, body) {
-                res.status(200).json({
-                    status: 'analyzed',
-                    body: body
+        var url = req.param('url');
+        request(url, function (error, response, body) {
+            favicon(url, function(err, favicon_url) {
+               myExtrator.extract(body, function(err,data){
+                    res.status(200).json({
+                        status: 'analyzed',
+                        body: data.meta,
+                        favicon: favicon_url
+                    });
                 });
-                console.log(body) // Show the HTML for the Google homepage.
-
+            });
         })
 
 
-        /*http.get('http://www.google.com', function(res) {
-            console.log("Got response: " + res.statusCode);
-
-            res.status(200).json({
-                status: 'analyzed',
-                title: "title"
-            });
-        }).on('error', function(e) {
-                console.log("Got error: " + e.message);
-            });*/
 
     };
 

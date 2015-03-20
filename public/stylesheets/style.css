@@ -38,7 +38,7 @@ a {
 
 .searchBox{
     width: 50%;
-    margin: 7% auto;
+    margin: 3% auto;
 }
 
 .form-group label{
@@ -46,5 +46,25 @@ a {
 }
 
 #FormInput{
-    width: 80% !important;
+    width: 100% !important;
+}
+
+.result{
+    border: 3px solid #563d7c;
+    border-radius: 5px;
+    padding: 15px;
+    width: 50%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.siteData{
+    margin-left: 5px;
+}
+
+.loading{
+    position: absolute;
+    margin-left: 50%;
+    margin-top: 6%;
+    visibility: hidden;
 }

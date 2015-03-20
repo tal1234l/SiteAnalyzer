@@ -1,12 +1,27 @@
 
 function sendUrl() {
 
+    $('.loading').css('visibility','visible');
+
     $.ajax({
         type: "POST",
         url: window.location.origin+"/analyze",
         data: {url: $('#FormInput').val()},
         success: function(data){
-            console.log(data);
+            if($(".analyzeResult li").length>0)
+            {
+                $(".analyzeResult li").remove();
+            }
+            var div = $('<li class="result">'+
+                        '<div class="block siteData">'+
+                            '<strong>Title: </strong>'+data.body.title+' <br>'+
+                            '<strong>Description: </strong>'+data.body.description+'<br>'+
+                            '<strong>Favicon: </strong>'+data.favicon+''+
+                        '</div>'+
+                        '</li>');
+            $(".analyzeResult").append(div);
+
+            $('.loading').css('visibility','hidden');
         },
         async: false,
         error: function(data){
