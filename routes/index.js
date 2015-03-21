@@ -1,11 +1,8 @@
 module.exports = function () {
     var request = require('request');
     var Extrator = require("html-extractor");
-    var utf8 = require('utf8');
-
     var myExtrator = new Extrator();
 
-    var charset = require('charset');
     var jchardet = require('jschardet');
     var iconv = require('iconv-lite');
     var favicon = require('favicon');
@@ -15,16 +12,6 @@ module.exports = function () {
 
     functions.analyze = function (req, res) {
         var url = req.param('url');
-
-        /*request.get({url: 'http://www.example.com', encoding: 'binary'}, function(err, res, body) {
-            var enc = charset(res.headers, body);
-
-            *//*enc = enc || jchardet.detect(body).encoding.toLowerCase();*//*
-            if (enc != 'utf-8')
-                var ic = new iconv(enc, 'UTF-8//TRANSLIT//IGNORE');
-            var html = ic.convert(new Buffer(body, 'binary')).toString('utf-8');
-            console.log(body);
-        });*/
 
         request.get({
                 url: url,

@@ -2,7 +2,7 @@
   "name": "git-website-analyzer",
   "version": "0.0.1",
   "private": true,
-  "description": "learn the alefh bet",
+  "description": "Site Analyzer",
   "author": "Tal Waserman",
   "main": "server.js",
   "scripts": {
@@ -10,7 +10,6 @@
   },
   "dependencies": {
     "body-parser": "~1.0.0",
-    "charset": "^1.0.0",
     "cookie-parser": "~1.0.1",
     "debug": "~0.7.4",
     "express": "~4.2.0",
@@ -19,17 +18,11 @@
     "html-extractor": "^0.1.3",
     "http": "0.0.0",
     "iconv-lite": "^0.4.7",
-    "jade": "~1.3.0",
     "jschardet": "^1.1.1",
     "morgan": "~1.0.0",
-    "node-metainspector": "^1.0.0",
-    "please-ajax": "^1.0.8",
     "request": "^2.53.0",
-    "static-favicon": "~1.0.0",
-    "string": "^3.0.1",
-    "utf8": "^2.1.0",
-    "xml2js": "^0.4.6",
-    "xmldoc": "^0.3.0"
+    "static-favicon": "~1.0.0"
+
   },
   "engines": {
     "node": "0.10.x"
