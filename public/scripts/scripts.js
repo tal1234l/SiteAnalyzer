@@ -25,6 +25,7 @@ function sendUrl() {
         },
         error: function(data){
             console.log("error");
+            $('.loading').css('visibility','hidden');
         }
     });
 
